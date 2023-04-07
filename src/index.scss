@@ -1,3 +1,4 @@
-p {
-  background-color: palevioletred;
-} // test case to see that sass works
+@import '@edx/brand/paragon/fonts.scss';
+@import '@edx/brand/paragon/variables.scss';
+@import '@edx/paragon/scss/core/core.scss';
+@import '@edx/brand/paragon/overrides.scss';
