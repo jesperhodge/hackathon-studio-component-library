@@ -6,6 +6,13 @@ import {
   ModalDialog,
 } from '@edx/paragon';
 
+import { FormattedMessage } from '@edx/frontend-platform/i18n';
+import { IntlProvider } from 'react-intl';
+
+import messages from './messages';
+
+
+
 interface Props {
   isOpen: boolean;
   close: () => {};
@@ -47,7 +54,7 @@ export const Modal: FC<Props> = ({
         {footerAction}
         <ActionRow.Spacer />
         <ModalDialog.CloseButton variant="tertiary" onClick={close}>
-          SomeMessage
+          <FormattedMessage {...messages.cancelButtonLabel} />
         </ModalDialog.CloseButton>
         {confirmAction}
       </ActionRow>

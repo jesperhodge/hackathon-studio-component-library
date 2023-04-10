@@ -1,5 +1,7 @@
+import React from 'react';
 import type { Preview } from "@storybook/react";
 import '../src/index.scss';
+import { IntlProvider } from 'react-intl';
 
 const preview: Preview = {
   parameters: {
@@ -11,6 +13,13 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <IntlProvider locale='en-us' messages={{}}>
+        <Story />
+      </IntlProvider>
+    ),
+  ],
 };
 
 export default preview;
