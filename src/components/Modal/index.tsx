@@ -7,7 +7,6 @@ import {
 } from '@edx/paragon';
 
 import { FormattedMessage } from '@edx/frontend-platform/i18n';
-import { IntlProvider } from 'react-intl';
 
 import messages from './messages';
 
@@ -15,12 +14,12 @@ import messages from './messages';
 
 interface Props {
   isOpen: boolean;
-  close: () => {};
+  close: () => any;
   title: string;
   children: string;
-  confirmAction: () => {};
-  footerAction: () => {};
-  size: string;
+  confirmAction: () => any;
+  footerAction?: () => any;
+  size?: string;
 }
 
 export const Modal: FC<Props> = ({
