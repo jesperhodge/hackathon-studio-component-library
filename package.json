@@ -2,11 +2,14 @@
   "name": "openedx-studio-component-library",
   "version": "0.1.0",
   "description": "React component library for openedx studio built on top of paragon",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "rm -rf /dist && tsc"
   },
   "repository": {
     "type": "git",
